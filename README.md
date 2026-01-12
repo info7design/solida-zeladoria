@@ -45,7 +45,7 @@ SolidaZeladoria/
 
 1. Clone este repositório:
 ```bash
-git clone https://github.com/seu-usuario/SolidaZeladoria.git
+git clone https://github.com/info7design/solida-zeladoria.git
 ```
 
 2. Abra o arquivo `index.html` em seu navegador
