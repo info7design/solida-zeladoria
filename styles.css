@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.bg-solida-yellow { background-color: #FBBF24; }
+.text-solida-yellow { color: #FBBF24; }
+.border-solida-yellow { border-color: #FBBF24; }
+
+.nav-link.active {
+    border-bottom: 2px solid #FBBF24;
+    color: #FBBF24;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.hero-gradient {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}

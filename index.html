@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sólida Zeladoria | Excelência em Serviços Patrimoniais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <div class="bg-solida-yellow p-2 rounded-lg">
+                            <i data-lucide="shield-check" class="text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-gray-800">SÓLIDA<span class="text-solida-yellow">ZELADORIA</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="showPage('home')" class="nav-link font-medium hover:text-solida-yellow transition-colors">Início</button>
+                    <button onclick="showPage('servicos')" class="nav-link font-medium hover:text-solida-yellow transition-colors">Serviços</button>
+                    <button onclick="showPage('sobre')" class="nav-link font-medium hover:text-solida-yellow transition-colors">Sobre Nós</button>
+                    <button onclick="showPage('contato')" class="bg-solida-yellow text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition-all shadow-lg">Fale Conosco</button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-xl">
+            <button onclick="showPage('home')" class="block w-full text-left font-medium">Início</button>
+            <button onclick="showPage('servicos')" class="block w-full text-left font-medium">Serviços</button>
+            <button onclick="showPage('sobre')" class="block w-full text-left font-medium">Sobre Nós</button>
+            <button onclick="showPage('contato')" class="block w-full text-left font-bold text-solida-yellow">Contato</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="pt-20">
+
+        <!-- HOME PAGE -->
+        <section id="page-home" class="page-content">
+            <!-- Hero Section -->
+            <div class="hero-gradient h-[80vh] flex items-center text-white relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                        Segurança e Organização <br>que seu <span class="text-solida-yellow">Condomínio Merece.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-2xl text-gray-300">
+                        A Sólida Zeladoria oferece soluções completas em portaria, limpeza e vigilância com profissionais altamente treinados para garantir tranquilidade e valorização patrimonial.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <button onclick="showPage('servicos')" class="bg-solida-yellow text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition-all flex items-center justify-center gap-2">
+                            Conhecer Serviços <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                        <button onclick="showPage('contato')" class="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all">
+                            Solicitar Orçamento
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Quick View -->
+            <div class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                        <div>
+                            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="award" class="text-solida-yellow w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Qualidade Sólida</h3>
+                            <p class="text-gray-600">Processos rigorosos de seleção e treinamento contínuo de nossa equipe.</p>
+                        </div>
+                        <div>
+                            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="clock" class="text-solida-yellow w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Suporte 24/7</h3>
+                            <p class="text-gray-600">Atendimento e supervisão constante para emergências e rotinas diárias.</p>
+                        </div>
+                        <div>
+                            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="user-check" class="text-solida-yellow w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Confiança Total</h3>
+                            <p class="text-gray-600">Transparência na gestão e compromisso total com as normas do seu condomínio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES PAGE -->
+        <section id="page-servicos" class="page-content hidden py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Nossos <span class="text-solida-yellow">Serviços</span></h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Oferecemos soluções integradas para condomínios residenciais e comerciais, focando na eficiência operacional e segurança.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Portaria -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden service-card flex flex-col md:flex-row border border-gray-100">
+                        <div class="md:w-1/2 h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=2070&auto=format&fit=crop" alt="Portaria" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Portaria'">
+                        </div>
+                        <div class="p-8 md:w-1/2">
+                            <i data-lucide="users" class="text-solida-yellow w-10 h-10 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">Portaria</h3>
+                            <p class="text-gray-600 mb-6">Controle de acesso rigoroso de pedestres e veículos, recepção de visitantes e encomendas com cordialidade e atenção constante.</p>
+                            <ul class="text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Treinamento em segurança</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Registro digital de acessos</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Gestão de entregas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Zeladoria -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden service-card flex flex-col md:flex-row border border-gray-100">
+                        <div class="md:w-1/2 h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1581578731522-632004278479?q=80&w=2070&auto=format&fit=crop" alt="Zeladoria" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Zeladoria'">
+                        </div>
+                        <div class="p-8 md:w-1/2">
+                            <i data-lucide="settings" class="text-solida-yellow w-10 h-10 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">Zeladoria</h3>
+                            <p class="text-gray-600 mb-6">Supervisão técnica, manutenção preventiva e pequenos reparos. O zelador atua como o elo entre a administração e os moradores.</p>
+                            <ul class="text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Vistoria diária das áreas comuns</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Coordenação de prestadores</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Apoio direto ao Síndico</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Limpeza -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden service-card flex flex-col md:flex-row border border-gray-100">
+                        <div class="md:w-1/2 h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" alt="Limpeza" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Limpeza'">
+                        </div>
+                        <div class="p-8 md:w-1/2">
+                            <i data-lucide="sparkles" class="text-solida-yellow w-10 h-10 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">Limpeza e Conservação</h3>
+                            <p class="text-gray-600 mb-6">Higiene impecável para áreas comuns, hall, elevadores e áreas de lazer. Utilizamos produtos e técnicas profissionais.</p>
+                            <ul class="text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Cronograma de limpeza detalhado</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Equipe uniformizada e equipada</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Foco em sustentabilidade</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Vigia -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden service-card flex flex-col md:flex-row border border-gray-100">
+                        <div class="md:w-1/2 h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop" alt="Vigia" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Vigia'">
+                        </div>
+                        <div class="p-8 md:w-1/2">
+                            <i data-lucide="eye" class="text-solida-yellow w-10 h-10 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">Vigia</h3>
+                            <p class="text-gray-600 mb-6">Rondas preventivas e monitoramento de pontos vulneráveis para inibir invasões e garantir a paz dos condôminos.</p>
+                            <ul class="text-sm space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Vigilância ostensiva</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Monitoramento de perímetros</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-solida-yellow"></i> Relatórios de ocorrências</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section id="page-sobre" class="page-content hidden py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-6">Compromisso com o que é <span class="text-solida-yellow">Sólido.</span></h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Fundada com o propósito de elevar o padrão de atendimento no setor de zeladoria, a **Sólida Zeladoria** nasceu da necessidade de serviços mais humanos, transparentes e, acima de tudo, eficientes.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Nossa missão é proporcionar segurança e bem-estar através de uma gestão de pessoas focada em resultados e na satisfação plena de síndicos e moradores.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="border-l-4 border-solida-yellow pl-4">
+                                <h4 class="font-bold text-xl">+15 Anos</h4>
+                                <p class="text-gray-500 text-sm">De experiência no mercado</p>
+                            </div>
+                            <div class="border-l-4 border-solida-yellow pl-4">
+                                <h4 class="font-bold text-xl">100%</h4>
+                                <p class="text-gray-500 text-sm">Equipe treinada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="relative">
+                            <div class="absolute -top-4 -left-4 w-24 h-24 bg-solida-yellow rounded-lg z-0"></div>
+                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop" alt="Equipe Sólida" class="rounded-2xl shadow-2xl relative z-10 w-full" onerror="this.src='https://via.placeholder.com/600x400?text=Nossa+Equipe'">
+                            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gray-800 rounded-lg z-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="page-contato" class="page-content hidden py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                    <!-- Contact Info -->
+                    <div class="lg:w-2/5 bg-solida-yellow p-12 text-black">
+                        <h2 class="text-3xl font-bold mb-8">Vamos conversar?</h2>
+                        <p class="mb-12 font-medium opacity-90">Estamos prontos para elaborar uma proposta personalizada para as necessidades do seu condomínio ou empresa.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-black/10 p-3 rounded-full">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold uppercase tracking-wider">Telefone</p>
+                                    <p class="text-lg">(11) 98765-4321</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-black/10 p-3 rounded-full">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold uppercase tracking-wider">E-mail</p>
+                                    <p class="text-lg">contato@solidazeladoria.com.br</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-black/10 p-3 rounded-full">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold uppercase tracking-wider">Endereço</p>
+                                    <p class="text-lg">Av. Paulista, 1000 - São Paulo, SP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:w-3/5 p-12 bg-white">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Seu Nome</label>
+                                    <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Seu E-mail</label>
+                                    <input type="email" placeholder="email@exemplo.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Assunto</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
+                                    <option>Orçamento para Condomínio</option>
+                                    <option>Orçamento para Empresa</option>
+                                    <option>Trabalhe Conosco</option>
+                                    <option>Outros Assuntos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Sua Mensagem</label>
+                                <textarea rows="4" placeholder="Como podemos te ajudar?" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gray-900 text-white py-4 rounded-lg font-bold hover:bg-gray-800 transition-all shadow-lg flex items-center justify-center gap-2">
+                                Enviar Mensagem <i data-lucide="send" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-solida-yellow p-1.5 rounded-lg">
+                            <i data-lucide="shield-check" class="text-black w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold">SÓLIDA<span class="text-solida-yellow">ZELADORIA</span></span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">Levando seriedade, segurança e eficiência para a gestão do seu patrimônio com a solidez que você procura.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-solida-yellow uppercase tracking-widest text-sm">Páginas</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><button onclick="showPage('home')" class="hover:text-white transition-colors">Início</button></li>
+                        <li><button onclick="showPage('servicos')" class="hover:text-white transition-colors">Serviços</button></li>
+                        <li><button onclick="showPage('sobre')" class="hover:text-white transition-colors">Sobre Nós</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-solida-yellow uppercase tracking-widest text-sm">Redes Sociais</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-solida-yellow hover:text-black transition-all">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-solida-yellow hover:text-black transition-all">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-solida-yellow hover:text-black transition-all">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Sólida Zeladoria Ltda. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Message Box (Custom Modal instead of alert) -->
+    <div id="message-box" class="fixed inset-0 flex items-center justify-center z-[100] hidden">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full mx-4 text-center">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="text-green-600 w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Mensagem Enviada!</h3>
+            <p class="text-gray-600 mb-6">Agradecemos o contato. Em breve nossa equipe retornará para você.</p>
+            <button onclick="closeMessage()" class="w-full bg-solida-yellow text-black py-3 rounded-lg font-bold">Ok, entendi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
