@@ -16,9 +16,7 @@
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center gap-2">
-                        <div class="bg-solida-yellow p-2 rounded-lg">
-                            <i data-lucide="shield-check" class="text-white"></i>
-                        </div>
+                        <img src="logo-solida.png" alt="Sólida Zeladoria Logo" class="h-16">
                         <span class="text-2xl font-bold tracking-tight text-gray-800">SÓLIDA<span class="text-solida-yellow">ZELADORIA</span></span>
                     </div>
                 </div>
@@ -51,8 +49,12 @@
         <!-- HOME PAGE -->
         <section id="page-home" class="page-content">
             <!-- Hero Section -->
-            <div class="hero-gradient h-[80vh] flex items-center text-white relative">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="h-[80vh] flex items-center text-white relative overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                    <source src="banner-video.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left relative z-10">
                     <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
                         Segurança e Organização <br>que seu <span class="text-solida-yellow">Condomínio Merece.</span>
                     </h1>
@@ -129,7 +131,7 @@
                     <!-- Zeladoria -->
                     <div class="bg-white rounded-2xl shadow-xl overflow-hidden service-card flex flex-col md:flex-row border border-gray-100">
                         <div class="md:w-1/2 h-64 md:h-auto">
-                            <img src="https://images.unsplash.com/photo-1581578731522-632004278479?q=80&w=2070&auto=format&fit=crop" alt="Zeladoria" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Zeladoria'">
+                            <img src="./img/Zelador.jpg" alt="Zeladoria" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Zeladoria'">
                         </div>
                         <div class="p-8 md:w-1/2">
                             <i data-lucide="settings" class="text-solida-yellow w-10 h-10 mb-4"></i>
@@ -146,7 +148,7 @@
                     <!-- Limpeza -->
                     <div class="bg-white rounded-2xl shadow-xl overflow-hidden service-card flex flex-col md:flex-row border border-gray-100">
                         <div class="md:w-1/2 h-64 md:h-auto">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" alt="Limpeza" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Limpeza'">
+                            <img src="./img/ASG.jpg" alt="Limpeza" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Limpeza'">
                         </div>
                         <div class="p-8 md:w-1/2">
                             <i data-lucide="sparkles" class="text-solida-yellow w-10 h-10 mb-4"></i>
@@ -163,7 +165,7 @@
                     <!-- Vigia -->
                     <div class="bg-white rounded-2xl shadow-xl overflow-hidden service-card flex flex-col md:flex-row border border-gray-100">
                         <div class="md:w-1/2 h-64 md:h-auto">
-                            <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop" alt="Vigia" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Vigia'">
+                            <img src="./img/vigia.jpg" alt="Vigia" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x400?text=Vigia'">
                         </div>
                         <div class="p-8 md:w-1/2">
                             <i data-lucide="eye" class="text-solida-yellow w-10 h-10 mb-4"></i>
@@ -187,15 +189,15 @@
                     <div class="md:w-1/2">
                         <h2 class="text-4xl font-bold mb-6">Compromisso com o que é <span class="text-solida-yellow">Sólido.</span></h2>
                         <p class="text-lg text-gray-700 mb-6">
-                            Fundada com o propósito de elevar o padrão de atendimento no setor de zeladoria, a **Sólida Zeladoria** nasceu da necessidade de serviços mais humanos, transparentes e, acima de tudo, eficientes.
+                            Fundada com o propósito de elevar o padrão de atendimento no setor de zeladoria, a Sólida Zeladoria nasceu da necessidade de serviços mais humanos, transparentes e, acima de tudo, eficientes.
                         </p>
                         <p class="text-lg text-gray-700 mb-8">
                             Nossa missão é proporcionar segurança e bem-estar através de uma gestão de pessoas focada em resultados e na satisfação plena de síndicos e moradores.
                         </p>
                         <div class="grid grid-cols-2 gap-6">
                             <div class="border-l-4 border-solida-yellow pl-4">
-                                <h4 class="font-bold text-xl">+15 Anos</h4>
-                                <p class="text-gray-500 text-sm">De experiência no mercado</p>
+                                <h4 class="font-bold text-xl">+16 Anos</h4>
+                                <p class="text-gray-500 text-sm">De experiência</p>
                             </div>
                             <div class="border-l-4 border-solida-yellow pl-4">
                                 <h4 class="font-bold text-xl">100%</h4>
@@ -230,7 +232,7 @@
                                 </div>
                                 <div>
                                     <p class="text-sm font-bold uppercase tracking-wider">Telefone</p>
-                                    <p class="text-lg">(11) 98765-4321</p>
+                                    <p class="text-lg">(12) 98299-3709</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
@@ -248,7 +250,7 @@
                                 </div>
                                 <div>
                                     <p class="text-sm font-bold uppercase tracking-wider">Endereço</p>
-                                    <p class="text-lg">Av. Paulista, 1000 - São Paulo, SP</p>
+                                    <p class="text-lg">Av. Nelson Davila, 389 sala 105 A - S.J Campos, SP</p>
                                 </div>
                             </div>
                         </div>
@@ -260,25 +262,36 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm font-bold text-gray-700 mb-2">Seu Nome</label>
-                                    <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
+                                    <input type="text" name="name" placeholder="Nome completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-bold text-gray-700 mb-2">Seu E-mail</label>
-                                    <input type="email" placeholder="email@exemplo.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
+                                    <input type="email" name="email" placeholder="email@exemplo.com" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-2">Assunto</label>
-                                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
-                                    <option>Orçamento para Condomínio</option>
-                                    <option>Orçamento para Empresa</option>
-                                    <option>Trabalhe Conosco</option>
-                                    <option>Outros Assuntos</option>
+                                <select name="subject" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all">
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="Orçamento para Condomínio">Orçamento para Condomínio</option>
+                                    <option value="Orçamento para Empresa">Orçamento para Empresa</option>
+                                    <option value="Trabalhe Conosco">Trabalhe Conosco</option>
+                                    <option value="Outros Assuntos">Outros Assuntos</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-2">Sua Mensagem</label>
-                                <textarea rows="4" placeholder="Como podemos te ajudar?" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all"></textarea>
+                                <textarea rows="4" name="message" placeholder="Como podemos te ajudar?" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-solida-yellow focus:outline-none transition-all"></textarea>
+                            </div>
+                            <!-- Upload Currículo (aparece quando Trabalhe Conosco é selecionado) -->
+                            <div id="curriculum-upload" class="hidden">
+                                <div class="bg-blue-50 border-2 border-dashed border-blue-300 rounded-lg p-6">
+                                    <label class="block text-sm font-bold text-gray-700 mb-3">Enviar Currículo</label>
+                                    <div class="flex flex-col gap-3">
+                                        <input type="file" id="curriculum-file" name="curriculum" accept=".pdf,.doc,.docx,.txt" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solida-yellow focus:outline-none cursor-pointer">
+                                        <p class="text-xs text-gray-600">📄 Formatos aceitos: PDF, DOC, DOCX, TXT (máx. 5MB)</p>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" class="w-full bg-gray-900 text-white py-4 rounded-lg font-bold hover:bg-gray-800 transition-all shadow-lg flex items-center justify-center gap-2">
                                 Enviar Mensagem <i data-lucide="send" class="w-5 h-5"></i>
@@ -328,7 +341,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 Sólida Zeladoria Ltda. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Sólida Zeladoria Ltda. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

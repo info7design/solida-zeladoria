@@ -32,15 +32,99 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
+// Mostrar/esconder campo de currículo
+document.querySelector('select[name="subject"]').addEventListener('change', function() {
+    const curriculumUpload = document.getElementById('curriculum-upload');
+    if (this.value === 'Trabalhe Conosco') {
+        curriculumUpload.classList.remove('hidden');
+    } else {
+        curriculumUpload.classList.add('hidden');
+    }
+});
+
 // Form Submission
-document.getElementById('contact-form').addEventListener('submit', function(e) {
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
-    document.getElementById('message-box').classList.remove('hidden');
+    
+    // Pegando os dados do formulário
+    const inputs = this.querySelectorAll('input[type="text"], input[type="email"], select, textarea');
+    const formDataObj = {
+        name: inputs[0].value,
+        email: inputs[1].value,
+        subject: inputs[2].value,
+        message: inputs[3].value
+    };
+
+    // Validação básica
+    if (!formDataObj.name || !formDataObj.email || !formDataObj.subject || !formDataObj.message) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+    }
+
+    try {
+        // Se for "Trabalhe Conosco", precisa validar currículo
+        if (formDataObj.subject === 'Trabalhe Conosco') {
+            const curriculumFile = document.getElementById('curriculum-file');
+            if (!curriculumFile.files || curriculumFile.files.length === 0) {
+                alert('Por favor, envie seu currículo!');
+                return;
+            }
+
+            // Validar tamanho do arquivo (máx 5MB)
+            if (curriculumFile.files[0].size > 5 * 1024 * 1024) {
+                alert('Arquivo muito grande! Máximo 5MB');
+                return;
+            }
+
+            // Usar FormData para enviar arquivo
+            const formData = new FormData();
+            formData.append('name', formDataObj.name);
+            formData.append('email', formDataObj.email);
+            formData.append('subject', formDataObj.subject);
+            formData.append('message', formDataObj.message);
+            formData.append('curriculum', curriculumFile.files[0]);
+
+            const response = await fetch('http://localhost:3000/api/send-contact', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                document.getElementById('message-box').classList.remove('hidden');
+                document.getElementById('contact-form').reset();
+                document.getElementById('curriculum-upload').classList.add('hidden');
+            } else {
+                alert('Erro ao enviar: ' + (data.error || 'Tente novamente'));
+            }
+        } else {
+            // Para outros assuntos, enviar JSON normalmente
+            const response = await fetch('http://localhost:3000/api/send-contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataObj)
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                document.getElementById('message-box').classList.remove('hidden');
+                document.getElementById('contact-form').reset();
+            } else {
+                alert('Erro ao enviar mensagem: ' + (data.error || 'Tente novamente'));
+            }
+        }
+    } catch (error) {
+        console.error('Erro:', error);
+        alert('Erro ao enviar mensagem. Verifique sua conexão e tente novamente.');
+    }
 });
 
 function closeMessage() {
     document.getElementById('message-box').classList.add('hidden');
-    document.getElementById('contact-form').reset();
 }
 
 // Initial setup
